@@ -1,0 +1,54 @@
+
+	body {
+    background-color: #996633;
+	font-family: 'lucida grande', tahoma, verdana, arian, sans-serif;
+}
+	#containerr{
+	text-align:left;
+	width:700px;
+	margin:0 auto;
+	padding:1px;
+	color:000000 ;
+	}
+	#container{
+	width:1080px;
+	margin:0 auto;
+	padding:2px;
+	color:000000 ;
+	font-size:25px;
+	font-family: 'lucida grande', tahoma, verdana, arian, sans-serif;
+	}
+	#navigation{
+	height:80px;
+	border:3px solid ;
+	margin-top:5px;
+	
+	}
+	#heding{
+	
+	font-size:50px;
+	}
+	ul#navmenu{
+	list-style-type:none;
+	font-size:20px;
+	}
+	ul#navmenu li{
+	width:160px;
+	text-align:center;
+	float:left;
+	margin-right:3x;
+	}
+	ul#navmenu a{
+	text-decoration:none;
+	display:block;
+	width: 180;
+	height:25px;
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-radius:5px;
+	}
+	#banner(
+	height:295px;
+	background-image:url(C:\xampp\htdocs\xamppnow.jpg);
+	background-size:cover;
+	)
