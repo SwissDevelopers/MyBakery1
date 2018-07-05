@@ -1,25 +1,9 @@
+<?php 
+include ("./header.inc.php");
 
-<?php include (".inca/header.inc.php"); ?>
-<?php
-if (isset($_POST['submitted'])) {
-	include("./inca/connect.inc.php");
 
-	$username = $_POST['username'];
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$email = $_POST['email'];
-	$usrtel = $_POST['usrtel'];
-	$dateorder = $_POST['dateorder'];
-	$KG = $_POST['KG'];
-	$cake = $_POST['cake'];
-	$sqlinsert = "INSERT INTO users (username,first_name,last_name,email,telephoneNo,date_order,cake_size,cake_info) VALUES ('$username','$firstname','$lastname','$email','$usrtel','$dateorder','$KG','$cake')";
-	if (!mysqli_query($dbcon, $sqlinsert)) {
-		die('error inserting new record');
-	}
-	echo "1 record added";
+ ?>
 
-}
-?>
 
 <style>
 	body {
@@ -87,17 +71,42 @@ if (isset($_POST['submitted'])) {
 <div id="navigation">
 <ul id="navmenu">
 <li><a href="home.html">Home</a></li>
-<li><a href="about.html">About</a></li>
 <li><a href="order.html">Order</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="menu.html">Menu</a></li>
-<li><a href="blog.html">Blog</a></li>
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
 <divid="banner"></div>
 </div>
-<form action="/action_page.php">
+<?php
+
+session_start();
+
+
+	$conn = mysqli_connect("localhost","root","","order")
+	  or die("Unable to connect");
+	
+
+	if (isset($_POST['submitted'])) {
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$usrtel = $_POST['usrtel'];
+	$email = $_POST['email'];
+	$dateorder = $_POST['dateorder'];
+	$cake = $_POST['cake'];
+	$KG = $_POST['KG'];
+	$Information = $_POST['Information'];
+
+	//Insert query
+	$query =mysqli_query($conn,"INSERT INTO `orders`(`first_name`,`last_name`,`telephoneNo`,`email`,`date_order`,`cake_type`,`cake_size`,`cake_info`) VALUES ('$firstname','$lastname','$usrtel','$email','$dateorder','$cake','$KG','$Information')");
+	
+	}
+	
+
+    mysqli_close($conn);
+?>
+<form method="POST" action="orderpage.php">
 	<input type="hidden" name="submitted" value="true" />
 <fieldset>
 <h1><u><u>Personal Details</u></u></h1>
@@ -254,4 +263,4 @@ Information:<br>
 				<th> </th>
 			</tr>	
 </table>			
-<?php include ("./inca/footer.inc.php" ); ?>
+

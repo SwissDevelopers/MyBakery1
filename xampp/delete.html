@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="google-site-verification" content="lngt-7PqeHgH9EEDd2vr1Mf4sPfbXzmAa1IUeeuT9qU">
+
+<title>Trudy's Bakery</title>
+
+<style type="text/css">
+
+	body {
+		background-repeat: no-repeat;
+		background-color: #ffffff;
+		padding: 0;
+		margin: 0;
+		}
+
+	#container {
+		position: absolute;
+		left: 50%;
+		width: 900px;
+		margin-left: -450px;
+		height: 600px;
+		top: 0px;
+		}
+
+	#returning {
+		position: absolute;
+		left: 400px;
+		top: 10px;
+		width: 500px;
+		height: 18px;
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 12px;
+		color: gray;
+		text-align: right;
+		}
+
+	#contentBox {
+		position: absolute;
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 32px;
+		color: black;
+		left: 0px;
+		top: 250px;
+		height: 350px;
+		width: 370px;
+		overflow: auto;
+		scrollbar-base-color: #F4F4F4;
+		}
+
+	#pictureBox {
+		position: absolute;
+		left: 400px;
+		top: 50px;
+		height: 550px;
+		width: 500px;
+		}
+
+	a img {
+		text-decoration: none;
+		border: 0 none;
+		margin: 0;
+		padding: 0;
+		}
+
+	#backBut {
+		position: absolute;
+		left: 0px;
+		top: 230px;
+		width: 370px;
+		height: 25px;
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 12px;
+		}
+
+	a:link {
+		color: green;
+		border-bottom: 1px dashed;
+		border-color: #C2A16C;
+		text-decoration: none;
+		}
+	a:visited {
+		color:#C272AF;
+		border-bottom: 1px dashed;
+		border-color: #C2A16C;
+		text-decoration: none;
+		}
+	a:hover {
+		color: #85C440;
+		border-bottom: 1px dashed;
+		border-color: #C2A16C;
+		text-decoration: none;
+		}
+	a:active {
+		color: #ED2024;
+		text-decoration: none;
+		}
+
+	#pictureBox a {
+		border: none;
+		padding: 0;
+		}
+
+	input {
+		font-size: 12px;
+		}
+
+	td {
+		font-size: 12px;
+		}
+
+	h3 {
+		background-color: #F4F4F4;
+		color: #000;
+		}
+
+	h4 {
+		font-size: 18px;
+		}
+
+	p {
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 12px;
+		line-height: 14px;
+		padding: 10px;
+		}
+
+	#em_sub {font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 12px;
+		line-height: 14px;
+		padding: 10px;
+		}
+		
+	#large	{
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: 900;
+		margin-left: 84px;
+		margin-right: 72px;
+		letter-spacing: -1px;
+		}
+
+	#medium	{
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 18px;
+		line-height: 42px;
+		padding-left: 80px;
+		padding-right: 72px;
+		}
+
+	#small	{
+		font-family: 'trebuchet ms',helvetica,sans-serif;
+		font-size: 12px;
+		line-height: 17px;
+		padding-left: 58px;
+		padding-right: 72px;
+		}
+
+	.bigNum	{
+		font-size: 20px;
+		color: #FF53FE;
+		}
+
+	</style>
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24748582-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+
+
+function pageSetup() {
+	showGallery();
+	fade('pictureBox',0,1,100);
+	showTagLine();
+	/*xmasBreak();*/
+	}
+
+function showBlog() {
+	showBlogBox();
+	fade('pictureBox',0,1,100);
+	}
+
+function showGallery() {
+	show1();
+	fade('pictureBox',0,1,100);
+	}
+
+
+
+function xmasBreak() {
+	var features = 'directories=no,menubar=no,status=no,titlebar=no,toolbar=no,width=400,height=150';
+	window.open ("http://cakecity.com/holidays.html", "mywindow", features);	
+	}
+
+function hideTagLine() {
+	document.getElementById("contentBox").innerHTML = document.getElementById('t070').innerHTML;
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('contentBox').style.color = 'white';
+	document.getElementById('contentBox').style.backgroundImage = 'url(buttonBG.png)';
+	document.getElementById('contentBox').style.backgroundRepeat = 'no-repeat';
+	}
+
+function showTagLine() {
+	document.getElementById("contentBox").innerHTML = "<img src='stunning.png'>";
+	setTimeout("onload=show010();",5000);
+	}	
+
+function zPad(n) {
+	var rs="";
+	if (n<10) { rs = "0"+n; }
+	else if (n<20) { rs = "1"+(n%10); }
+	else { rs="2"+(n%10); }
+	return rs;
+	}
+
+function showImage(IMG) {
+	var sImg = "<a a href='javascript:show1()'><img src='http://cakecity.com/pics/"+zPad(IMG)+"cc.jpg'></a>";
+	document.getElementById("pictureBox").innerHTML = sImg;
+	fade('pictureBox',0,1,100);
+	}
+
+function setOpacity(myOBJ,opac) {
+	var tOBJ = document.getElementById(myOBJ).style;
+	opac = (opac == 100)?99.999:opac;		
+	tOBJ.filter = "alpha(opacity:"+opac+")";	
+	tOBJ.KHTMLOpacity = opac/100;			
+	tOBJ.MozOpacity = opac/100;			
+	tOBJ.opacity = opac/100;
+	}
+
+function fadeOLD(myOBJ,slider,dir,limit) { 
+	if (dir==1) { 
+		if (slider < limit) { 
+			var tOBJ = document.getElementById(myOBJ).style;
+			slider = slider + 2;
+			slider = (slider == 100)?99.999:slider;		
+			tOBJ.filter = "alpha(opacity:"+slider+")";	
+			tOBJ.KHTMLOpacity = slider/100;			
+			tOBJ.MozOpacity = slider/100;			
+			tOBJ.opacity = slider/100;
+			setTimeout(function(){fade(myOBJ,slider,dir,limit);},8);
+			}
+		}
+	else { 
+		if (slider > limit) { 
+			var tOBJ = document.getElementById(myOBJ).style;
+			slider = slider - 2;
+			slider = (slider == 100)?99.999:slider;		
+			tOBJ.filter = "alpha(opacity:"+slider+")";	
+			tOBJ.KHTMLOpacity = slider/100;			
+			tOBJ.MozOpacity = slider/100;			
+			tOBJ.opacity = slider/100;
+			setTimeout(function(){fade(myOBJ,slider,dir,limit);},8);
+			}
+		}
+	}
+
+function fade(myOBJ,slider,dir,limit) {
+	
+	}
+
+function show1() {
+	document.getElementById('pictureBox').innerHTML = document.getElementById('t001').innerHTML;
+	document.getElementById('pictureBox').style.display = 'block';
+	}
+
+function show2() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t002').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function show3() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t003').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function show3a() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t003a').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function show3b() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t003b').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function show3c() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t020').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function show010() {
+	document.getElementById('contentBox').innerHTML = document.getElementById('t010').innerHTML;
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('contentBox').style.display = 'block';
+	document.getElementById('backBut').style.display = 'block';
+	}
+
+function goBack() {
+	document.getElementById('contentBox').innerHTML = "<img src='stunning.png'>";
+	document.getElementById('contentBox').style.backgroundImage = 'none';
+	document.getElementById('contentBox').style.color = 'black';
+	document.getElementById('backBut').style.display = 'none';
+	}
+
+function showBlogBox() {
+	document.getElementById('pictureBox').innerHTML = document.getElementById('t080').innerHTML;
+	document.getElementById('pictureBox').style.display = 'block';
+	}
+
+function showContactForm() {
+	document.getElementById('pictureBox').innerHTML = document.getElementById('t090').innerHTML;
+	document.getElementById('pictureBox').style.display = 'block';
+	}
+
+function load() {
+var load = window.open('https://cakecity.com/order01.php','','scrollbars=yes,menubar=no,height=600,width=800,resizable=yes,toolbar=no,location=no,status=no');
+}
+
+
+</script>
+
+<script type="text/javascript" src="em_sub/email.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+
+	<img src="https://tse4.mm.bing.net/th?id=OIP.O9mfz1Eu5nSLOyZPQHuqEgHaGa&pid=15.1&P=0&w=175&h=152">
+	<div id="pictureBox" style="display: block;">
+	<a href="javascript:showImage(1)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/01cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(2)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/02cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(3)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/03cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(4)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/04cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(5)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/05cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(6)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/06cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(7)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/07cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(8)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/08cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(9)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/09cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(10)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/10cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(11)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/11cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(12)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/12cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(13)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/13cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(14)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/14cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(15)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/15cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(16)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/16cc.jpg" width="114" height="126"></a>
+	</div>
+	
+	<div id="returning">
+		
+	
+		
+
+		</div>
+		
+
+	
+	</div>
+
+<div id="t001" style="display:none;">
+	<a href="javascript:showImage(1)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/01cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(2)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/02cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(3)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/03cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(4)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/04cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(5)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/05cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(6)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/06cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(7)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/07cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(8)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/08cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(9)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/09cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(10)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/10cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(11)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/11cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(12)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/12cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(13)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/13cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(14)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/14cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(15)"><img style="margin: 0px 10px 10px 0px" src="http://cakecity.com/pics/15cc.jpg" width="114" height="126"></a>
+	<a href="javascript:showImage(16)"><img style="margin: 0px 0px 10px 0px" src="http://cakecity.com/pics/16cc.jpg" width="114" height="126"></a>
+	</div>
+	<script language="JavaScript">
+<!--
+setTimeout("onload=pageSetup();",1000);
+//-->
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38773806-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+</body>
+</html>
