@@ -99,7 +99,7 @@ session_start();
 	$Information = $_POST['Information'];
 
 	//Insert query
-	$query =mysqli_query($conn,"INSERT INTO `orders`(`first_name`,`last_name`,`telephoneNo`,`email`,`date_order`,`cake_type`,`cake_size`,`cake_info`) VALUES ('$firstname','$lastname','$usrtel','$email','$dateorder','$cake','$KG','$Information')");
+	$query =mysqli_query($conn,"INSERT INTO `order`(`first_name`,`last_name`,`telephoneNo`,`email`,`date_order`,`cake_type`,`cake_size`,`cake_info`) VALUES ('$firstname','$lastname','$usrtel','$email','$dateorder','$cake','$KG','$Information')");
 	
 	}
 	

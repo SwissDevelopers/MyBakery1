@@ -2588,7 +2588,7 @@ width: 94.2%;
 }
 }
 </style>
-<title>order</title>
+<title>contact</title>
 </head>
 <body>
 <div id="container">
@@ -2618,36 +2618,15 @@ width: 94.2%;
 					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819" frameborder="0" style="border:0"></iframe>
 				</div>
 				<div class="contact-form">
+
 					<form>
 							<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
 							<input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
 							<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message</textarea>
 							<input type="submit" name="reg" value="Submit" />
-							<?php
-
-session_start();
-
-
-	$conn = mysqli_connect("localhost","root","","order")
-	  or die("Unable to connect");
-	
-
-	if (isset($_POST['Submitted'])) {
-	$Name = $_POST['Name'];
-	$Email = $_POST['Email'];
-	$Telephone = $_POST['Telephone'];
-	$Message = $_POST['Message'];
-	
-
-	//Insert query
-	$query =mysqli_query($conn,"INSERT INTO `contact`(`Name`,`Email`,`Telephone`,`Message`) VALUES ('$Name','$Email','$Telephone','$Message')");
-	
-	}
-	
-
-    mysqli_close($conn);
-?>		
+							
+		
 					</form>
 					
 					</br>
